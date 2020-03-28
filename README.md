@@ -10,7 +10,7 @@
 
 ## [python](python/catalog.md)
 
-## [git handbook](./git handbook/git命令手册.md)
+## [Git HandBook](./GitHandBook/catalog.md)
 
 ## [Regular Expressions](RegularExpressions/catalog.md)
 
