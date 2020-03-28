@@ -1,14 +1,16 @@
 # 这个仓库用于放学习编程语言的笔记
 
-## [C](./C)
+## [C](C/catalog.md)
 
-## [C++](./c++/C++.md) 
+## [C++](./c++/catalog.md) 
 
-## [Java](./Java)
+## [Java](./Java/catalog.md)
 
-## [JavaScript](./JavaScript/JavaScript.md)
+## [JavaScript](./JavaScript/catalog.md)
 
-## python
+## [python](python/catalog.md)
 
 ## [git handbook](./git handbook/git命令手册.md)
+
+## [Regular Expressions](RegularExpressions/catalog.md)
 
