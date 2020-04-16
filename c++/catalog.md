@@ -1,8 +1,65 @@
 # C++目录
 
+**c++历史**
+
+**于c语言的区别**
+
+​		1.c语言是结构化和模块化的语言，面向过程。未完全实现解决软件设计危机的目标
+
+​		2.c++保留了c语言原有的所有优点，增加了面向对象的机制。
+
+​		3.对c语言的功能做了扩充
+
+**开发工具**
+
+1. `记事本+命令行`
+2. `visual c++ 6.0`
+3. `vs 2015`
+4. ` Code::blocks（开源免费的`
+5. 其它开发工具 DEV C++ ,CLion,C-Free,Xcode（Mac）,C4droid。。。`
+6. ` minGW`
+
+**C++编码风格**
+
+- 每条语句各占一行
+
+- 每个函数都有一个开始和结束的花括号，花括号各占一行
+
+- 函数中的语句对相对于花括号进行缩进
+
+- 与函数名称相关的小括号周围没有空白
+
+  **书写注释是一个良好的编程习惯**
+
+  - 有助于对代码的阅读
+  - 注释语言因准确，易懂，简洁
+  - 单行注释：以“ // ” 开头
+  - 多行注释：以“ /* ” 开头，“ */ ”结尾
+
+```c++
+//输出 hello world ！
+//version 1.0
+#include<iostream>
+int main ()
+{
+    std::cout<<"hello world !"<<std::endl;  // endl==end line  表示重起一行（回车!=\n 1.换行 2.+清空缓存区）
+    return 0;
+}
+
+//version 2.0
+
+#include<iostream>
+using namespace std; // std== standard = n.标准
+int main()
+{
+    cout<<"Hello World !"<<endl;
+    return 0;
+}
+```
+
 **1.C++关键字**
 
-auto
+
 
 **输出语句（cout）**
 
