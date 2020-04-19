@@ -16,7 +16,7 @@
 2. `visual c++ 6.0`
 3. `vs 2015`
 4. ` Code::blocks（开源免费的`
-5. 其它开发工具 DEV C++ ,CLion,C-Free,Xcode（Mac）,C4droid。。。`
+5. 其它开发工具 `DEV C++` ,`CLion`,`C-Free`,`Xcode（Mac）`,`C4droid`。。。`
 6. ` minGW`
 
 **C++编码风格**
@@ -73,7 +73,7 @@ int main()
   - 浮点型
     - 单精度浮点型 float
     - 双精度浮点型double
-  - 字符型
+  - 字符型`char`
   - 定义字符类型（typedef）
   - 宏定义（#define）
   - size_t类型
@@ -84,6 +84,20 @@ int main()
   - 空类型
 
 **数据类型**
+
+**运算符**
+
+​			取模的场景（%）
+
+- 取某个数字的各位			`125%10`
+
+- 45天是一个月零几天      `45%30`
+
+  **位运算符**
+
+- `sizeof()`运算符
+
+  **运算符优先级**
 
 **输出语句（`cout`）**
 
@@ -103,11 +117,15 @@ int main()
 
 `static_cast<long>(thon)  //将变量thon转换为long类型`
 
+
+
 [**数组（array）**](./content/array.md)
 
 ​	模板类vector
 
 ​	模板类array（C++ 11 new add）
+
+
 
 [**结构体struct**](./content/struct.md)
 
