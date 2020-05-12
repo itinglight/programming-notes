@@ -119,13 +119,86 @@ int main()
 
 
 
+
+
+**循环语句**
+
+1. **while循环**	
+
+2. **do-while循环**
+
+3. **for循环**
+
+   外层循环控制行（行数，换行）
+
+   内层循环控制列（列数，列的图形）
+
 [**数组（array）**](./content/array.md)
 
 ​	模板类vector
 
 ​	模板类array（C++ 11 new add）
 
+​	一维数组
 
+​	二维数组
+
+​	数组的替代品：
+
+##### 			向量容器vector
+
+​						vector 是一个快速的动态分配内存的数组    **大小可以动态扩展**
+
+```C++
+//	向量容器vector的用法
+//定义和初始化：
+#include <vector>;
+vector<double>vecDouble = {1,2,3,4,5};
+vector<string>vec2(5);
+
+//在数组的尾部插入一个数字
+vecDouble.push_back(13)
+    
+    //集合的通用遍历方法：使用迭代器 iterator
+    vector<double>::iterator it; //得到迭代器对象
+
+```
+
+
+
+### 指针(pointer)	
+
+​			指针是一个值为内存地址的变量（或数据对象）
+
+​			**指针变量占4个字节**
+
+```C++
+//基本用法
+int* ptr_num;
+int a;
+//取地址符 &
+ptr_num=&a; // 将ptr_num 与a绑定
+//间接运算符 *
+
+/*
+	空指针（nullptr）需包含头文件#include<cstdlib>
+
+*/
+//void*指针  一种特殊的指针类型。可以存放任意对象的地址
+		一般用来和别的指针比较   
+
+            
+//引用(reference) *****
+            //为对象起了另外一个名字
+            //引用对指针进行了简单的封装，底层任然是指针
+            
+//指针与数组
+            
+```
+
+### 指针的运算
+
+​		指针的递增和递减（++，--）
 
 [**结构体struct**](./content/struct.md)
 
