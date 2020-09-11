@@ -79,19 +79,38 @@ int &b=a;// 将b作为整型变量a的引用
   - 整型
     - 短整型：`short int`
     - 长整型:    `long int`
+    
   - 浮点型
     - 单精度浮点型 float
     - 双精度浮点型double
+    
   - 字符型`char`
+
+  - 字符串变量（string）
+
+    ```C++
+    #include<iostream> 
+    #include<string>//定义字符串变量需声明头文件 “string”
+    ```
+
+    
+
   - 定义字符类型（typedef）
+
   - 宏定义（#define）
+
+  - 定义常量（`const`）
+
   - size_t类型
+
   - 枚举类型
+
   - 自定义类型
-    - 定义常量（`const`）
+
   - 指针类型
+
   - 空类型
-  
+
   **数据类型**
 
 **运算符**
@@ -106,6 +125,21 @@ int &b=a;// 将b作为整型变量a的引用
 
 - `sizeof()`运算符
 
+- 作用域运算符
+
+- ```C++
+//作用域运算符
+  #include<iostream>
+  using namespace std;
+  float a=13.5;
+  int main(){
+  int a=5;
+  cout<<a; //输出局部变量a的值
+  cout<<::a;	//输出全局变量a的值
+   return 0；
+  }
+  ```
+  
   **运算符优先级**
 
 **输出语句（`cout`）**
@@ -209,11 +243,44 @@ ptr_num=&a; // 将ptr_num 与a绑定
 
 ​		指针的递增和递减（++，--）
 
+## 函数重载
+
+## 函数模版
+
+```C++
+//关键字 template ｜typename
+
+//方法1
+template<typename T>   //模版声明
+//通用函数定义
+
+//方法二
+
+template<class T>				//模版声明
+  
+```
+
+## 内置函数
+
+```c++
+/* 内置函数又称为内联函数
+
+关键字：inline
+
+作用：可以节省运行时间，但却增加了目标程序的长度。
+
+适用对于规模很小且使用频繁的函数使用内联函数可以大大提高运行效率
+
+*/
+```
+
+
+
 ## 类和对象class
 
 ```C++
 class 类名{
-  
+  //private，pubiic，protected
     private:
         // 私有的数据和成员函数
     public:
@@ -234,7 +301,22 @@ class 类名{
 
 ## [**结构体struct**](./content/struct.md)
 
+```C++
+struct Student{
+  
+  private:
+  	int num;
+  	char name[20];
+  	char sex;
+  
+  public:
+  	void display(){ //成员函数
+      cout<<"num:"<<num<<endl;
+    }
+};
 
+Student stud1,stud2;  //定义了两个Student类的对象
+```
 
 [**共用体（union）**](./content/union.md)
 

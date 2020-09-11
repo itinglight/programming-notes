@@ -11,7 +11,7 @@
 | **double**   | dynamic_cast     | **else**      | **enum**     | explicit   |
 | export       | extern           | **false**     | **float**    | **for**    |
 | friend       | **goto**         | **if**        | inline       | **int**    |
-| **long**     | mutabe           | namespace     | new          | noexcept   |
+| **long**     | muta83/5*9699be  | namespace     | new          | noexcept   |
 | nullptr      | operator         | private       | protected    | public     |
 | register     | reinterpret_cast | **return**    | **short**    | signed     |
 | **sizeof**   | static           | static_assert | stact_cast   | **struct** |
