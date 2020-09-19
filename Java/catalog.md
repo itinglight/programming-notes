@@ -10,4 +10,14 @@
 2. Java EE    
 3. Java ME
 
-​	
+## 输出第一个hello word
+
+```java
+// 输出Hello world
+public class	Hello{
+  public static void main(String[] args){
+    System.out.println("Hello world");
+  }
+}
+```
+
