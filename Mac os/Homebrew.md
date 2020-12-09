@@ -18,9 +18,11 @@ Homebrew简介：Mac os 上的包管理工具。   package manager
 
 国内加速安装命令
 
-- ```
-  /bin/zsh -c "$(curl -fsSL https://gitee.com/jyotish/HomebrewCN/raw/master/Homebrew.sh)"
+- ```c
+  /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
   ```
+  
+  
 
 安装前需要安装git
 
@@ -29,3 +31,60 @@ Homebrew简介：Mac os 上的包管理工具。   package manager
 Git 原下载地址（速度慢）： https://git-scm.com/download/mac
 Git 国内镜像地址（速度快）： https://www.newbe.pro/Mirrors/Mirrors-Git-For-MacOS/
 
+通过Xcode命令行工具安装git
+
+```
+$ xcode-select --install
+```
+
+
+
+uninstall homebrew 
+
+```
+cd `brew --prefix`
+rm -rf Cellar
+brew prune
+rm `git ls-files`
+rm -r Library/Homebrew Library/Aliases Library/Formula Library/Contributions
+rm -rf .git
+rm -rf ~/Library/Caches/Homebrew
+```
+
+卸载任意包
+
+```ruby
+$ brew uninstall <packageName>
+```
+
+查询可用包
+
+```ruby
+$ brew search <packageName>
+```
+
+查看已安装包列表
+
+```cpp
+$ brew list
+```
+
+查看任意包信息
+
+```ruby
+$ brew info <packageName>
+```
+
+更新Homebrew
+
+```ruby
+$ brew update
+```
+
+查看Homebrew版本
+
+```ruby
+$ brew -v
+```
+
+Homebrew帮助信息
