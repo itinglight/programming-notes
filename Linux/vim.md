@@ -34,6 +34,7 @@ vim ~/.vimrc		 #修改vimrc文件，如果不存在就创建一个
 
 ```
 :echo $VIM     # 找出vim文件的位置
+:scriptname		 #查看各脚本的加载顺序:
 ```
 
 ```
@@ -62,3 +63,4 @@ vim vimrc
 显示文件结构（[tagbar](https://link.jianshu.com/?t=https://github.com/majutsushi/tagbar)）
 
 vim的插件管理工具[vundle](https://link.jianshu.com/?t=https://github.com/gmarik/Vundle.vim)
+
