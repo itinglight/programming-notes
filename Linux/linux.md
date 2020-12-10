@@ -326,8 +326,6 @@ tar -ztvf /mydata/etc.tar.gz |more -c -10
 
 ![img](https:////upload-images.jianshu.io/upload_images/1939592-af79e7065276e265.png?imageMogr2/auto-orient/strip|imageView2/2/w/789)
 
-image
-
 - 解压文件到当前目录（gzip）：
 
 ```bash

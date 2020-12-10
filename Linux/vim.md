@@ -1,3 +1,5 @@
+
+
 # Vim
 
 ----强大的文本编辑器
@@ -36,6 +38,18 @@ vim ~/.vimrc		 #修改vimrc文件，如果不存在就创建一个
 :echo $VIM     # 找出vim文件的位置
 :scriptname		 #查看各脚本的加载顺序:
 ```
+
+```
+syntax on
+set number                      "显示行号
+set relativenumber              "相对行号
+set set shiftwidth=4            "自动缩进时的空白长度
+set t_Co=256                    "vim配色为256色
+set cursorline                  "高亮当前光标行
+set cursorcolumn                "高亮当前光标列
+```
+
+
 
 ```
 cd
