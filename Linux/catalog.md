@@ -35,10 +35,16 @@
 | halt       |                                |
 | poweroff   |                                |
 | pwd        | 获取目前所在工作目录的绝对路径 |
+| which      | 获取软件的安装路径             |
 | cat        | 显示文件内容                   |
+| less       | 在一个新窗口显示文件内容       |
+| More       |                                |
 | ls         | 列出当前目录下的文件           |
+| ll         | 列出当前目录下的文件           |
 | rm         | 删除文件                       |
+| rm -r      | 删除文件夹                     |
 | touch      | 创建文件                       |
+| Mkdir      | 新建文件夹                     |
 | cp         | 拷贝文件（复制）               |
 | mv         | 移动或覆盖文件                 |
 | tar        | 解压文件                       |
@@ -54,8 +60,9 @@
 | Debian   | `.deb`        | `apt`, `apt-cache`, `apt-get`, `dpkg` |
 | Ubuntu   | `.deb`        | `apt`, `apt-cache`, `apt-get`, `dpkg` |
 | CentOS   | `.rpm`        | `yum`                                 |
+| Manjaro  |               | Pacman                                |
 | Fedora   | `.rpm`        | `dnf`                                 |
-| FreeBSD  | Ports, `.txz` | `make`, `pkg`                         |
+| FreeBSD  | Ports, `.txz` | `make`, `pkg`p                        |
 
 
 
@@ -78,3 +85,6 @@
 |      |                                |
 |      |                                |
 
+## shell脚本
+
+语法：
