@@ -11,6 +11,7 @@
 | [Ctrl +d ]          | (相当于输入quit) |
 | [Shift + Page Up]   | 向前翻页         |
 | [Shift + Page Down] | 向后翻页         |
+| ^a                  | 移动到命令行前面 |
 | q                   | 离开当前文档     |
 
 ### Linux常用命令:

@@ -88,3 +88,68 @@ $ brew -v
 ```
 
 Homebrew帮助信息
+
+显示软件信息
+
+```
+brew info   
+```
+
+  显示包依赖
+
+```
+brew deps  
+```
+
+
+
+## 安装常用软件包
+
+```
+brew cask install google-chrome
+brew cask install fliqlo
+brew cask install alfred
+brew cask install dropbox
+brew cask install java
+brew cask install intellij-idea
+//
+
+brew cask install atom
+brew cask install datagrip
+brew install deno
+brew cask install discord
+brew cask install docker
+brew install emacs
+brew install golang
+brew cask install google-chrome
+brew cask install intellij-idea
+brew cask install mailmaster
+brew install micro
+brew cask install mos
+brew cask install mumble
+brew cask install neteasemusic
+brew install nginx
+brew services start nginx
+brew install node
+brew cask install adoptopenjdk8
+brew install openjdk@11
+brew cask install popo
+brew cask install postman
+brew cask install QQ
+brew cask install qqmusic
+brew install rustup-init
+brew cask install sogouinput
+brew cask install shadowsocksx-ng-r
+brew cask install telegram
+brew install telnet
+brew cask install tencent-meeting
+brew cask install terminus
+brew install tree
+brew install unrar
+brew cask install visual-studio-code
+brew cask install wechat
+brew install wget
+brew cask install youdaodict
+brew cask install aliwangwang
+```
+

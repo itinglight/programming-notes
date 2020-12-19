@@ -19,3 +19,7 @@ $ defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 
 ## [homebrew](/Users/tinglight/Desktop/programming-notes/Mac os/Homebrew.md)
 
+```
+cat /etc/shells    // 查看当前系统已安装的shell版本
+```
+
