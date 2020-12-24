@@ -152,6 +152,18 @@ setPrioitty(int newPriority)//改变线程的优先值（级）
 5.通过Thread类的对象调用start()
 
 ```java
+//代码实现
+class window1 implements Runnable{
+  @override
+  public void run(){
+    
+  }
+}
+```
+
+
+
+```java
 //开发中：优先选择：实现Runnable接口的方式
 
 原因：1.实现的方式没有类的单继承的局限性
@@ -161,5 +173,23 @@ setPrioitty(int newPriority)//改变线程的优先值（级）
 联系：public class Thread implements Runnable
 
 相同点：两种方式都需要重写run（），将线程要执行的逻辑声明在run（）中。
+```
+
+# synchronized 同步
+
+```java
+//同步代码块 
+public void run(){
+   			synchronized(同步监视器){
+          //需要被同步的代码
+      }
+  }
+//同步方法
+		//使用同步方法解决实现类的线程安全问题
+public synchronized void run(){//synchronized默认调用this  同步监视器是本身
+   	
+}
+		//使用同步方法解决继承类的线程安全问题
+	
 ```
 
