@@ -37,7 +37,7 @@ cd ~/.oh-my-zsh/custom/plugins
 
 
 
-```
+```shell
 
  
 github地址：
@@ -72,6 +72,28 @@ plugins=(
 ```
 
 ```shell
-source ~/.zshrc
+source ~/.zshrc #重新启动
 ```
+
+### 4.配置主题
+
+```shell
+# Oh-My-Zsh 的默认配置文件在：~/.zshrc。编辑～/.zshrc 修改主题，这里我用的是 ys 主题，更多主体看[这里](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)，直接修改即可，无需下载
+ZSH_THEME="ys"
+# !!!! 重启终端后有效 或 使用 source ~/.zshrc 更新配置
+
+# 题外话，不太想显示主机名，所以直接干掉主机名
+# 编辑 ~/.oh-my-zsh/themes/ys.zsh-theme，最后面改成这样
+PROMPT="
+%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
+%{$fg[white]%}in \
+%{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
+${hg_info}\
+${git_info}\
+ \
+%{$fg[white]%}[%*] $exit_code
+%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+```
+
 

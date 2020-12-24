@@ -8,7 +8,7 @@ Homebrew简介：Mac os 上的包管理工具。   package manager
 
 - ## Install Homebrew
 
-  ```
+  ```shell
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
 
@@ -33,7 +33,7 @@ Git 国内镜像地址（速度快）： https://www.newbe.pro/Mirrors/Mirrors-G
 
 通过Xcode命令行工具安装git
 
-```
+```shell
 $ xcode-select --install
 ```
 
@@ -41,7 +41,7 @@ $ xcode-select --install
 
 uninstall homebrew 
 
-```
+```shell
 cd `brew --prefix`
 rm -rf Cellar
 brew prune
