@@ -105,6 +105,35 @@ class Person{
 
 ```
 
+### 表 1 Java中常见运行时异常
+
+| 异常类型                      | 说明                                                  |
+| ----------------------------- | ----------------------------------------------------- |
+| ArithmeticException           | 算术错误异常，如以零做除数                            |
+| ArraylndexOutOfBoundException | 数组索引越界                                          |
+| ArrayStoreException           | 向类型不兼容的数组元素赋值                            |
+| ClassCastException            | 类型转换异常                                          |
+| IllegalArgumentException      | 使用非法实参调用方法                                  |
+| lIIegalStateException         | 环境或应用程序处于不正确的状态                        |
+| lIIegalThreadStateException   | 被请求的操作与当前线程状态不兼容                      |
+| IndexOutOfBoundsException     | 某种类型的索引越界                                    |
+| NullPointerException          | 尝试访问 null 对象成员，空指针异常                    |
+| NegativeArraySizeException    | 再负数范围内创建的数组                                |
+| NumberFormatException         | 数字转化格式异常，比如字符串到 float 型数字的转换无效 |
+| TypeNotPresentException       | 类型未找到                                            |
+
+### 表 2 Java常见非运行时异常
+
+| 异常类型                     | 说明                       |
+| ---------------------------- | -------------------------- |
+| ClassNotFoundException       | 没有找到类                 |
+| IllegalAccessException       | 访问类被拒绝               |
+| InstantiationException       | 试图创建抽象类或接口的对象 |
+| InterruptedException         | 线程被另一个线程中断       |
+| NoSuchFieldException         | 请求的域不存在             |
+| NoSuchMethodException        | 请求的方法不存在           |
+| ReflectiveOperationException | 与反射有关的异常的超类     |
+
 # 多线程
 
 ### 1.通过extends Thread类 实现多线程
@@ -191,5 +220,51 @@ public synchronized void run(){//synchronized默认调用this  同步监视器�
 }
 		//使用同步方法解决继承类的线程安全问题
 	
+```
+
+解决线程的安全问题的方式三：lock锁
+
+```java
+private ReentrantLock lock = new ReentrantLock(); 
+locl.lock()//调用锁定的方法
+locl.unlock()//调用解锁的方法
+```
+
+## 线程通信涉及到的三个方法：
+
+```java
+wart()		//一旦执行此方法，当前线程就进入阻塞状态，并释放同步监视器
+notify()	//一旦执行此方法，就会唤醒被wait的一个线程，如果有多个线程被wait就唤醒优先级高的
+notifySll() //一旦执行此方法，就会唤醒所有被wait的线程
+
+ // 上面这三个方法是定义在object中的
+  
+```
+
+JDK5.0新增线程创建方式
+
+## 新增加方式一：实现Callable接口
+
+```java
+class NumThread implements Callavle{
+
+	@Override
+	public Pbject call() throws Exception{
+	
+	}
+}
+```
+
+## 新增加方式二：使用线程池
+
+```java
+//代码实现
+ExecutorService service =executors.newFixedThreadPool(10);
+//
+
+service.execute(new NuberThread());
+
+//
+service.shutdown();
 ```
 
