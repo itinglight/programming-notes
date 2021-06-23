@@ -16,3 +16,19 @@ fingerprint：指纹
 
 finger：手指
 
+# Javascript
+
+## 输出Hello world！
+
+方法一
+
+```javascript
+window.alert("Hello world!");
+```
+
+方法二
+
+```
+consol
+```
+
