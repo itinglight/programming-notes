@@ -28,8 +28,8 @@ Git的设置文件为`.gitconfig`，它可以在用户主目录下（全局配�
 > $ git config -e [--global]
 > 
 > # 设置提交代码时的用户信息
-> $ git config [--global] user.name "[name]"
-> $ git config [--global] user.email "[email address]"
+> $ git config --global user.name "itinglihgt"
+> $ git config --global user.email "itinglight@gmail.com"
 > ```
 
 ## 三、增加/删除文件
