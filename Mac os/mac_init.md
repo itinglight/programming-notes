@@ -18,6 +18,12 @@ brew install clashx
 brew install 
 ```
 
+```bash
+# 先安装oh-my-zsh 在同步配置文件
+# 安装 oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 4.同步配置文件
 
 ```bash
