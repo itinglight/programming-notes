@@ -24,6 +24,7 @@ Git的设置文件为`.gitconfig`，它可以在用户主目录下（全局配�
 > # 显示当前的Git配置
 > $ git config --list
 > 
+> 
 > # 编辑Git配置文件
 > $ git config -e [--global]
 > 
@@ -56,6 +57,8 @@ Git的设置文件为`.gitconfig`，它可以在用户主目录下（全局配�
 > 
 > # 改名文件，并且将这个改名放入暂存区
 > $ git mv [file-original] [file-renamed]
+> #撤销所有的已经 add 的文件:
+> git reset HEAD .
 > ```
 
 ## 四、代码提交
