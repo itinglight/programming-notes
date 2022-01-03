@@ -1,5 +1,25 @@
 # 这个仓库用于放学习编程语言的笔记
 
+# ITingLight Studing note.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## [C](C/catalog.md)
 
 ## [C++](./c++/catalog.md) 

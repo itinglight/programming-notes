@@ -1,5 +1,7 @@
 # Nginx
 
+http://114.132.238.50/28/
+
 ## 功能
     1.反向代理
         客户端不知道具体访问的是哪一台服务器。（正向代理：服务器不知具体哪一台客户端发出的请求）
@@ -9,6 +11,15 @@
         网页的静态资源和动态资源分别部署。
     4.重写
         将80端口转为443端口
+
+## 常用命令
+nginx -s quit 从容停止，防止工作未完成就停止
+
+nginx -s stop 立即停止
+
+killall nginx 杀死进程
+
+systemctl stop nginx.service linux 系统停止一项服务
 
 ## 配置文件
 ​ Nginx 配置文件主要有 4 部分，main (全局设置)、server（主机设置）、upstream（上游服务器设置，主要为反向代理，负载均衡相关配置）和 location（url 匹配特定位置的设置），每部分包含若干指令。
@@ -32,6 +43,15 @@ sites.conf	配置 nginx 提供的网站，包括虚拟主机
 ### 反向代理
 
 ```bash
-
-
+opstream itinglight{
+    server 192.168.1.3:8081 weight=1;
+    server 192.168.1.4:8080 weight=2;
+}
+sever {
+	listen 80;
+	server_name localhost; # 此处改为相应的域名
+	location / {
+		proxy_pass X.X.X.X; # 被代理的服务器
+	}
+}
 ```
