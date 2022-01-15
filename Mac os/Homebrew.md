@@ -6,6 +6,13 @@ Homebrew简介：Mac os 上的包管理工具。   package manager
 
 官网：https://brew.sh
 
+brew install gcc    //安装软件
+brew uninstall gcc  //卸载软件
+brew search gcc     //搜索软件
+brew upgrade gcc    //更新软件
+brew list           //查看安装列表
+brew update         //更新Homebrew
+
 - ## Install Homebrew
 
   ```shell
