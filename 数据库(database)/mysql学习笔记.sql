@@ -213,5 +213,7 @@ ADD CONSTRAINT  `FK_carId` FOREIGN KEY (`carId`) REFERENCES 'car'(`carId`);
     truncate user;
 
 
+use itinglight;
 #DQL查询语言
-select
+select * from user
+where `name` is not null
