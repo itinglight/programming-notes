@@ -142,3 +142,38 @@ SSM：SpringMvc+Spring+Mybatis！
 1. 在xml中显式的配置
 2. 在java中显式配置
 3. 隐式的自动装配bean【重要】
+
+### 注解
+
+```xml
+<-->开启注解</-->
+<context:annotation-congih/>
+
+
+@Override
+
+```
+
+
+
+**@Autowired**：自动装配通过类型：名字
+
+​	如果@Autowired不能唯一自动装配上属性，则需要通过@Qualifier（value=“xxx”)
+
+**@Nullable** 字段标记了这个注解，说明这个字段可以为null；
+
+**@Resource**：自动装配通过名字：类型
+
+##### @Resource和@Autowired的区别：
+
+- 都是用来自动装配的，都可以放在属性字段上
+- @Autowired通过byType的方式实现，而且必须要求这个对象存在！【常用】
+- @Resource默认通过byname的方式实现，如果找不到名字，则通过byType实现！如果两个都找不到的情况下，就报错！【常用】
+- 执行顺序不同：@Autowired 通过byType的方式实现。@Resource默认通过byname的方式实现。
+
+### 步骤
+
+1. 写几个类
+2. 写入bean
+3. 确定导入了xmlns：context=“http://www.springframework.org/schema/context"约束
+4. 开启注解的支持 <context:annotation-congih/>
