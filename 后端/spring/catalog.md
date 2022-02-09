@@ -34,7 +34,7 @@ SSM：SpringMvc+Spring+Mybatis！
 
 弊端：发展了太久之后，违背了原来的理念！配置十分繁琐，人称：“配置地狱”。
 
-### 导入Spring
+### 导入SpringBeanXML
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -177,3 +177,107 @@ SSM：SpringMvc+Spring+Mybatis！
 2. 写入bean
 3. 确定导入了xmlns：context=“http://www.springframework.org/schema/context"约束
 4. 开启注解的支持 <context:annotation-congih/>
+
+```
+
+```
+
+
+
+###   10,代理模式
+
+​	代理模式的分类：
+
+- 静态代理
+- 动态代理
+
+#### 静态代理
+
+代理模式的好处：
+
+- 可以使真实角色的操作更加纯粹！不用去关注一些公共的业务
+- 公共也就交给代理角色！实现了业务的分工！
+- 公共业务发生扩展的时候，方便集中管理！
+
+缺点：
+
+- ​	一个真实角色就会产生一个代理角色；代码量会翻倍～开发效率会变低～
+
+#### 动态代理
+
+- 动态代理和静态代理角色一样·
+
+- 动态代理的代理类是动态生成的，不是我们直接写好的！
+
+- 动态代理分为两大类：基于接口的动态代理，基于类的动态代理
+
+  - 基于接口---JDK动态代理
+  - 基于类：cglib
+  - Java字节码实现：javasist
+
+  #### Proxy（） InvocationHandor（）接口
+
+  动态代理的好处：
+
+  - 可以使真实角色的操作更加纯粹！不用去关注一些公共的业务
+  - 公共也就交给代理角色！实现了业务的分工！
+  - 公共业务发生扩展的时候，方便集中管理！
+  - 一个动态代理类可以代理多个类，只要是实现了同一个接口
+
+### AOP 
+
+​	SpringAOP的底层**代理模式**
+
+### 导入aspectjweaver包
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.4</version>
+</dependency>
+```
+
+
+
+方法1
+
+- [ ] ```xml
+     <aop:config>
+          <!--配置aop-->
+      <!--配置切入点-->
+         <aop:pointcut id="pointcut" expression="execution(* service.userServiceImpl.*(..))"/>
+  
+          <!--执行环绕增加-->
+         <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
+     </aop:config>
+  
+  ```
+
+  
+
+  ```java
+  ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+          userService userService = (service.userService) context.getBean("userServiceImpl");
+          userService.addUser();
+  ```
+
+  方法2 切面定义
+
+  ```
+  <aop:config>
+  
+  </aop:config>
+  ```
+
+  
+
+- [ ] 方法3 注解
+
+@Before
+
+@Affter
+
+@Around
+

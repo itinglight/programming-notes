@@ -498,6 +498,12 @@ rpm -e nginx-1.12.2-2.el7.x86_64
 yum install nginx
 ```
 
+- 卸载软件包
+
+```bash
+yum remove tomcat 
+```
+
 - 检查可以更新的软件包：
 
 ```bash
