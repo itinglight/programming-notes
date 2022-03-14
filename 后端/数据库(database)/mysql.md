@@ -18,6 +18,7 @@
     
     关键字：不区分大小写
 ### 查
+
 ```
     show databases; --查看所有数据库
     show tables; --查看数据库中所有的表
@@ -54,9 +55,13 @@ create table
 
 删
 
+```
+		delete
+```
+
 改
 ```
-    
+    update
 ```
 查
 ```
