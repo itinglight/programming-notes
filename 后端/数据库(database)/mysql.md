@@ -25,8 +25,9 @@
     describe user; --查看表的结构 (等价于 desc user)
 ```
 ### 增
-```
+```mysql
     create databases;
+    creare database shop character set utf8 collate utf8_general_ci
 ```
 ### 使用数据库
 ```
@@ -328,6 +329,8 @@ select
 
 #### Select 
 
+**distinct**去重
+
 ```mysql
 # select
 
@@ -384,3 +387,174 @@ where `name` is not null
 
 
 #### INNER JOIN 并集查询
+
+
+
+ 
+
+```
+SELECT name ,age ,phone
+FROM student
+INNER JOIN result
+
+```
+
+
+
+### 分页和排序
+
+排序：升序：**ASC** ，降序**DESC**
+
+**ORDER BY** 通过那个字段排序 怎么排
+
+
+
+
+
+**Limit** 当前页 页面的大小
+
+LIMIT 1，5
+
+【pageSize：页面大小】
+
+（n-1）* pageSize，pageSize
+
+【n：当前页】
+
+【数据总数/页面大小=总页数 
+
+### 子查询 
+
+where（这个值是计算出来的）
+
+
+
+
+
+
+
+### MySQL常用函数
+
+
+
+========常用函数========
+
+```mysql
+ABS()#绝对值
+CEILING #向上取整
+FLOOR #向下取整
+RAND（）#返回一个0到1之间的随机数
+SIGN（）# 判断一个数的符号 负数返回-1 正数返回1
+
+---字符串---
+SELECT CHAR_LENGTH("hello"); #字符串长度
+SELECT CONCAT('Hello','World!');
+
+
+SELECT SYSTEM_USER();
+SELECT USER();
+SELECT VERSION();
+
+```
+
+
+
+========聚合函数========
+
+```mysql
+SELECT count() 
+SUM()
+AVG()
+MAX()
+MIN()
+
+```
+
+
+
+### 分组和过滤
+
+ **GROU BY**
+
+**Having**
+
+​	对sleect出来的数据进行筛选
+
+
+
+### 数据库级别的MD5加密
+
+**MD5()**
+
+```mysql
+update usertable set pwd=MD5(pwd);
+
+INSERT INTO usertable VALUES('001',"itinglight",MD5("123456"));
+
+SELECT * FROM usertable WHERE 'name'='itinglight'AND PWD=(MD5("123456"));
+```
+
+
+
+```mysql
+select 去重 要查询的字段 from 表（注意：表和字段可以取别名）
+XXX join 要连接的表 on 等值判断
+where（具体的值，子查询语句）
+group by（通过哪个字段分组）
+Having（过滤分组后的形象，条件和where是一样的，位置不同）
+order by (通过哪个字段排序)(升序/降序)
+limit startIndex pagesize
+```
+
+
+
+###  事务
+
+什么是事务
+
+​	要么成功，要么都失败
+
+事务原则：ACID，指数据库事务正确执行的四个基本要素的缩写。包含：[原子性](https://so.csdn.net/so/search?q=原子性&spm=1001.2101.3001.7020)（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）。一个支持事务（Transaction）的数据库，必需要具有这四种[特性](http://baike.baidu.com/view/884393.htm)
+
+
+
+```mysql
+SET autocommit = 0
+SET autocommit = 1 #开启事务自动提交
+
+--手动处理事务
+set autocommit=0
+
+--事务开始
+START TRANSACTION
+insert ...
+insert ...
+
+COMMIT; # 提交
+ROLLBACK # 回滚
+
+--事务结束
+set autocommit = 1；
+SAVEPOINT --保存点
+ROLLBACK TO SAVEPOINT
+RELEASE SAVEPOINT #删除保存点
+```
+
+
+
+
+
+### 索引
+
+主键索引（PRIMARY KEY）
+
+唯一索引 （UNIQUE KEY） 避免重复的列出现，唯一是索引可以重复，多个列都可以标示位 唯一索引
+
+常规索引（KEY/index）
+
+全文索引（FUllText）
+
+​	
+
+
+
