@@ -556,5 +556,93 @@ RELEASE SAVEPOINT #删除保存点
 
 ​	
 
+```mysql
+--索引的使用
+--1，在创建表的时候给字段增加索引
+--2，创建完毕后，增加索引
 
+--显示所有的索引信息
+SHOW INDEX FROM student
+
+--增加一个全文索引（索引名） 列名
+ALTER TABLE school.student ADD FULLTEXT INDEX `sudentName`('studentName');
+--EXPLAIN 分析sql执行的状况
+EXPLATIN SELECT * FROM student;--非全文索引
+EXPLATIN SELECT * FROM student WHERE MATCH(studentName)AGATNST('姜')
+
+
+```
+
+http://blog.codinglabs.org/articles/theory-of-mysql-index.html 索引扩展阅读
+
+### MySQL 编程
+
+```mysql
+DELIMITER $$
+CREATE FUNCTION Show_page()
+RETURN INT
+BEGIN 
+	DECLARE num INT DEFAULT 10000;
+	DECLARE i INT  
+END
+```
+
+### 权限管理
+
+​		新增用户
+
+```mysql
+create user itinglight;
+		
+CREATE USER itinglgiht IDENTIFIED BY '123'
+
+# 修改当前用户密码
+
+SET PASSWORD FOR itinglight=password('111')
+
+# 修改用户名
+RENAME USER itinglgiht TO jiangbin;
+#查看用户权限
+show grants for itinglight;
+#查看root用户的权限
+SHOW GRANTS FOR root@localhost;
+#用户授权 授权用户所有权限 出了授权权限
+GRANT ALL PRIVILEGES ON *.* TO itinglight;
+
+
+
+#撤销权限
+REVOKE ALL PRIVILEGES ON *.* TO itinglight;
+
+#删除用户
+DROP USER jiangbin;
+```
+
+
+
+### 数据库备份
+
+- 保证重要的数据不被流失
+
+- 数据转移
+
+- ```mysql
+  mysqldump -h localhost -u root -p123 szhaibai products > /Users/itinglight/Desktop/backup.sql 
+  
+  
+  #导入备份文件
+  source backupFile
+  
+  mysql -u 用户名 -p 密码 库名< 备份文件
+  ```
+
+  
+
+### 数据库的规约，三大范式
+
+
+
+
+
+### JDBC
 
