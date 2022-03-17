@@ -2,7 +2,7 @@
 
 # ITingLight Studing note.
 
-
+ 
 
 ## [C](C/catalog.md)
 
@@ -33,3 +33,7 @@
 ## [数据库](./database/database.md)
 
 ## 计算机组成原理	
+
+
+
+1. 
