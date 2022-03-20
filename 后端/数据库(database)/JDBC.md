@@ -126,3 +126,13 @@ c3p0
 Druid:阿里巴巴
 
 官方文档：https://druid.apache.org/
+
+```xml
+       <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+```
+
