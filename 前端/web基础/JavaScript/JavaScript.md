@@ -435,12 +435,12 @@ location.assign('https://szhaibai.cn')
 
 Document 代表当前页面 HTML 
 
-```
+```javascript
 document.title
 
 document.getElementById('app')
 document.getElementsByClassName('app')
-document.getElementsByTagName('button')
+document.getElementsByTagName('button') //document.getElementsByTagName('button')[0]
 document.cookie //获取cookie
 ```
 
@@ -482,5 +482,20 @@ father.removeChild(p1);
 .remove
 ```
 
+追加
 
+```
+.appendChild('<h1>hello<h1>') //追加到后面
+```
+
+
+
+### JS对表单的操作
+
+MD5算法 实现对用户密码加密
+
+```
+<script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.19.0/js/md5.js"></script>
+alert(md5(123456))
+```
 
