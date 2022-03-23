@@ -74,8 +74,8 @@ resultSet.absolute(row); //移动到指定行·
 ### 事务
 
 ```java
- connection.setAutoCommit(false); //关闭自动提交开始事务
- 
+connection.setAutoCommit(false); //关闭自动提交开始事务
+connection.commit();//提交事务
   //如果失败默认回滚
 connection.rollback();//回滚事务
 ```
@@ -134,5 +134,100 @@ Druid:阿里巴巴
             <artifactId>druid</artifactId>
             <version>1.2.8</version>
         </dependency>
+```
+
+```java
+package com.itinglight.jdbctest.Utils;
+
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.*;
+import java.util.Properties;
+
+public class JDBC_Druid_Utils {
+
+    private static DruidDataSource dataSource=null;
+
+    static{
+        InputStream inputStream = JDBC_Druid_Utils.class.getClassLoader().getResourceAsStream("jdbc-config-druid.properties");
+        Properties properties = new Properties();
+        System.out.println(properties);
+        try {
+
+                properties.load(inputStream);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            dataSource= (DruidDataSource) DruidDataSourceFactory.createDataSource(properties);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * 获取数据库连接
+     * @return
+     * @throws SQLException
+     */
+    public static Connection getConnection() throws SQLException {
+        return dataSource.getConnection();
+    }
+
+    /**
+     * 释放资源
+     * @param connection
+     */
+    public static void release(Connection connection){
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * 释放所有资源
+     * @param connection
+     * @param preparedStatement
+     * @param resultSet
+     */
+    public static void releaseAll(Connection connection, PreparedStatement preparedStatement, ResultSet resultSet){
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+            if (preparedStatement != null) {
+                preparedStatement.close();
+            }
+            if (resultSet != null) {
+                resultSet.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}
+```
+
+Jdbc-config-driud.properties
+
+```java
+driverClassName=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3310/mybatis?characterEncoding=utf8&useSSL=false
+username=root
+password=123
 ```
 

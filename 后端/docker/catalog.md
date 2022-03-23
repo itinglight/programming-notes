@@ -38,6 +38,12 @@
 
 ```
 
+### 启动Mysql
+
+```bash
+docker run -d -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123 --name mysql06 mysql:5.7 
+```
+
 
 
 ## 操作命令：

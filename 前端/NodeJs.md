@@ -425,3 +425,4 @@ module.exports={
 
 开源地址：https://github.com/PanJiaChen/vue-element-admin
 
+教程：https://juejin.cn/post/6844903476661583880
