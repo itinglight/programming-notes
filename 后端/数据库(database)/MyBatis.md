@@ -124,3 +124,69 @@ MyBatis可以配置多套运行环境
 `(properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?)`
 
 
+
+
+
+
+
+## 分页
+
+##### limit
+
+##### MyBatis 分页插件 PageHelper：https://pagehelper.github.io/
+
+## 注解
+
+
+
+
+
+
+
+
+
+
+
+#{} ${}
+
+#{} 能够很大程度上防止SQL注入
+
+
+
+
+
+
+
+## LomBok
+
+使用 1.IDEA安装插件 2.maven导入相关依赖
+
+- java library
+- plugs
+- build tools
+- wiith one annotation you class
+
+```
+@Getter and @Setter
+@FieldNameConstants
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor, @RequiredArgsConstructor and @NoArgsConstructor
+@Log, @Log4j, @Log4j2, @Slf4j, @XSlf4j, @CommonsLog, @JBossLog, @Flogger, @CustomLog
+@Data
+@Builder
+@SuperBuilder
+@Singular
+@Delegate
+@Value
+@Accessors
+@Wither
+@With
+@SneakyThrows
+@val
+@var
+experimental @var
+@UtilityClass
+```
+
+@Date:无参构造，
