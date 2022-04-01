@@ -62,7 +62,9 @@ align-content:flex-start  /*换行后才有效果 换行元素的对齐方式*/
 flex-flow:column wrap;/*flex-direction和flex-swarp的简写*/
 
 /*子项属性*/
-flex:1; /*子项分配多少生于空间的份数 默认为0 */
+flex:0; /*子项分配多少生于空间的份数 默认为0 */
+align-self:auto;/*控制子项在侧轴上的移动位置*/
+order:0;/*控制子元素的位置默认为0 值越小越靠前*/
 ```
 
 
