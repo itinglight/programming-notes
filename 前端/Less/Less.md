@@ -17,6 +17,27 @@
 
 - VScode 安装 Easy Less 插件
 
+  - 添加"less.compile" 设置编译less文件为css文件的保存路径
+
+  ```json
+  {
+      "editor.inlineSuggest.enabled": true,
+      "github.copilot.enable": {
+          "*": false,
+          "yaml": false,
+          "plaintext": false,
+          "markdown": false
+      },
+      "less.compile": {
+          "out": "../css/"
+      },
+      "editor.fontSize": 14,
+      "window.zoomLevel": -1
+  }
+  ```
+
+  
+
 ### 嵌套
 
 &:hover 
