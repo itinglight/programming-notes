@@ -52,8 +52,17 @@
 
 ```css
 display:felx;
-flex-direction:row;
-align-items:
+
+/*flex container 属性*/
+flex-direction:row; /*设置主轴方向 默认X轴 row /row- reverse/y轴 column-reverse*/
+justify-content:flex-start;/*设置子元素在主轴上的对齐方式 flex-start flex-end center space-around space-between*/
+flex-swarp:nowarp; 
+align-items:flex-start /*设置侧轴上的对齐方式 stretch 拉升*/
+align-content:flex-start  /*换行后才有效果 换行元素的对齐方式*/
+flex-flow:column wrap;/*flex-direction和flex-swarp的简写*/
+
+/*子项属性*/
+flex:1; /*子项分配多少生于空间的份数 默认为0 */
 ```
 
 
