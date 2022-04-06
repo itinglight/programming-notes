@@ -144,3 +144,36 @@ JavaScript
 devtool:'source-map'
 ```
 
+Source-map:一种 提供源代码懂啊构建后代码映射技术 （如果构建后代码出错了，通过映射可以追踪源代码错误）
+
+`[inline-|hidden-|eval-][nosources-][cheap-[module-]]source-map`
+
+Inline-source-map 内联 嵌入在js文件里面
+
+Hidden-source-map 外部 输出map在外部
+
+eval-source-map：内联 每一个文件都生成一个map
+
+开发环境：速度快，调试更友好
+
+​	速度快(eval>inline>cheap>...)
+
+​		eval-cheap-souce-map
+
+​		eval-source-map  脚手架默认使用
+
+​	调试更友好
+
+​		souce-map
+
+​		cheap-module-souce-map
+
+​		cheap-sauce-map
+
+生成环境：内联会让代码体积变大，所以在生产环境不用内联
+
+nosources-source-map 全部隐藏
+
+
+
+使用OneOf
