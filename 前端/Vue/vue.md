@@ -30,7 +30,7 @@ npm run serve
 v-bind:title=""
 ```
 
-
+`v-show`
 
 `v-if`
 
@@ -42,9 +42,62 @@ v-bind:title=""
 
 `v-else-if`
 
-`v-else-`
+`v-else`
 
 
 
 `v-for`
+
+
+
+
+
+计算属性 computed
+
+监视属性(侦听属性) watch
+
+```
+watch 完整写法
+
+watch 简写
+```
+
+
+
+
+
+数据代理：
+
+```javascript
+Object.definproperty(){
+  get(){
+    
+  },
+  set(){
+    
+  }
+}
+
+      const person1={
+            name:'itinglight',
+            address:"it",
+        }
+        Object.defineProperty(person1,'age',{
+            // value:18,
+            enumerable:true, //控制属性是否可以枚举，默认值是false
+            // writable:true,  //控制属性是否可以被修改，默认值是false
+            // configurable:true ,//控制时属性是否可以被删除，默认是false
+            get(){
+                return 12
+           
+            },
+            // set:function(){
+                
+            // }
+        })
+```
+
+Vue.set()
+
+Vue.$set()
 
