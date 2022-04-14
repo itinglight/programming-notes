@@ -30,6 +30,27 @@ npm run serve
 v-bind:title=""
 ```
 
+### 事件修饰符
+
+```
+prevent：阻止默认事件
+stop：阻止时间冒泡
+once：事件只触发一次
+capture 使用事件的捕获模式
+self： 只有event.target是当前操作元素时才触发事件
+passive： 事件的默认行为立即执行，无需等待事件回调执行完毕
+```
+
+`v-model`
+
+
+
+```
+v-model.number
+v-model.trim 输入首位空格过滤
+v-model.lazy 失去焦点在收集数据
+```
+
 `v-show`
 
 `v-if`
@@ -48,7 +69,19 @@ v-bind:title=""
 
 `v-for`
 
+`v-text` #向其所在的标签插入文本
 
+`v-html`
+
+`v-cloak`  vue接管后会删除改属性
+
+`v-once` 始终显示变量的初始值
+
+`v-pre`	跳过没有使用指令的语法 ,没有使用插值语法的节点，会加快编译。
+
+
+
+自定义指令
 
 
 
@@ -100,4 +133,16 @@ Object.definproperty(){
 Vue.set()
 
 Vue.$set()
+
+### 过滤器
+
+filter
+
+```
+filters:{
+	timeFormater(value){
+		return 
+	}
+}
+```
 
