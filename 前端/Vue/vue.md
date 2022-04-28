@@ -146,3 +146,40 @@ filters:{
 }
 ```
 
+
+
+
+
+## Vuex
+
+安装Vuex
+
+`npm i vuex@3`
+
+`import Vuex from 'vuex'`
+
+
+
+
+
+## Vue Router
+
+`npm i vue-router@3`
+
+`import VueRouter from 'vue-router'`
+
+`Vue.use(VueRouter)`
+
+```{
+import About from '../components/About'
+exprot default= new VueRouter({
+	routers:[
+		{
+			path:'/about',
+			component:About
+		}
+	]
+})
+```
+
+Import router from './router'                                                                                             
