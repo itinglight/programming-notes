@@ -47,6 +47,9 @@
 
 CRUD:
 # 新增表
+
+`source` 在命令行里面创建表
+
 create table 
 增
 ```mysql
