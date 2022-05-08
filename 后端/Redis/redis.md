@@ -1,8 +1,18 @@
 # Redis
 
+Redis-cli
+
+```
+info Server
+```
+
 五大基本类型
 
-String List Set（集合）
+1. String
+2. List 【底层**双向链表**】
+3. Set（集合）【哈希表实现的字典】
+4. Hash哈希
+5. Zset有序集合【‘跳跃表】
 
 ```shell
 select 1
@@ -25,5 +35,111 @@ incr key#当value为数字时 +1
 decr key #当value为数字时 -1
 incrby key <步长> #当value为数字时 增加指定数量
 decrby key <步长> #当value为数字时 增加减少数量
+
+mset #设置多个key value
+mget #获取多个key的值
+msetnx #设置多个不存在的key value
+getrange #getrange key 0 3 
+setrangee name 3 abc #设置第几位开始为abc
+setex <key><过期时间><value>
+getset key newValue #获取旧值设置新值
+
+###列表常用命令
+lpush k1 v1 v2 v3 #从左边放
+lrange k1 0 3
+rpush k2 v1 v2 v3#从右边放
+lpop k1 #从左边取
+rpop k1 #从右边取
+rpoplpush k1 k2#将右边的值取出来放到左边
+lindex key index #根据index获取value
+llen key #获取列表的长度
+linsert key before|after <value> <newValue> #在value之前新增一个值
+lrem<key><n><value>从左边删除n个value（从左到右）
+lset<key><index><value>将列表key下标为index的值替换成value
+
+###Set常用命令
+sadd k1 v1 v2 v3 
+smembers k1
+sismembers k1 v1
+scard  #返回该集合元素的个数
+spop #随机从该集合中吐出一个值
+srandmember #随机从该集合中取出n个值，不会从集合中删除
+smove #把集中中的一个值移动到另一个集合。
+sinter #返回两个集合中的交集元素
+sunion #返回两个集合中的并集元素
+sdiff #返回两个集合中的差集元素
+
+###Hash常用命令
+hset
+hget
+hmset
+hmget
+hkeys
+hvals
+hincrby
+hsetnx
+
+###ZSet常用命令
+zadd topn 200 java 300 c++ 400 mysql 500Php
+zrangebyscore topn 300 500
+zrevrangebyscore k
+zincrby 
+zrem
+zcount
+zrank
+
 ```
 
+## 配置文件
+
+下载地址：http://download.redis.io/redis-stable/redis.conf
+
+## 发布和订阅
+
+Subscribe channel1
+
+publish channel1 hello
+
+
+
+## Bitmaps
+
+```
+setbit key offset value
+getbit 
+bitcount #统计值为1的操作
+bitop #bitop and
+```
+
+可以用来统计日活量
+
+## HyperLogLog
+
+```shell
+pfadd 
+pfcount # 统计基数大数量
+pfmerge #合并两个key的值
+```
+
+## Gepgraphic 地理信息
+
+```shell
+#geoadd key [NX|XX] [CH] longitude latitude member [longitude latitude member ...]
+geoadd
+geopos
+geodist #取两个位置之间的直线距离
+georadius china:city 104 28 1000 km #查询地点指定范围内的城市
+```
+
+## jedis
+
+需要修改配置文件中的
+
+bind 127.0.0.1 注释掉
+
+protcted-mode yes 改为no
+
+```java
+//创建Jedis对象
+Jedis jedis = new Jedis("127.0.0.1",6379);
+```
