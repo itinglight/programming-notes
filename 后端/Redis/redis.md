@@ -27,10 +27,14 @@ dbsize #查看当前库的key数量
 flushdb #清空当前库
 dlushall #清空全部库
 
+
+###String常用命令
+set #设置key的值
 get #获取key的值
 append #追加
 strlen #获取key value的长度
 setnx # 不存在时设置key
+setex #设置key的同时设置过期时间
 incr key#当value为数字时 +1
 decr key #当value为数字时 -1
 incrby key <步长> #当value为数字时 增加指定数量
@@ -125,6 +129,7 @@ pfmerge #合并两个key的值
 
 ```shell
 #geoadd key [NX|XX] [CH] longitude latitude member [longitude latitude member ...]
+#geoadd china:city 1o6.50 29.53 chongqing 
 geoadd
 geopos
 geodist #取两个位置之间的直线距离
@@ -139,7 +144,88 @@ bind 127.0.0.1 注释掉
 
 protcted-mode yes 改为no
 
+关闭防火墙
+
+`systemctl status firewalld` 查看防火墙状态
+
+`systemctl  stop firewalld` 关闭防火墙
+
 ```java
 //创建Jedis对象
 Jedis jedis = new Jedis("127.0.0.1",6379);
 ```
+
+## SpringBoot整合Redis
+
+导入依赖
+
+```xml
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>2.11.1</version>
+		</dependency>
+```
+
+配置redis
+
+![截屏2022-05-09 08.04.54](截屏2022-05-09 08.04.54.png)
+
+## 事务
+
+multi 
+
+```
+multi #开启事物
+discard #取消事物
+exec #执行事务
+```
+
+悲观锁
+
+乐观锁（Optimistic Lock）
+
+```shell
+watch key #监视
+multi
+
+
+exec
+```
+
+## ab实现并发测试
+
+centos `yum install https-tools`
+
+`ab -n 10220 -c 10 http://localhost:8080/test`
+
+-n 发送请求数量
+
+-c 并发请求数
+
+### 使用链接池解决超时问题
+
+### Lua脚本解决库存遗留问题
+
+```java
+jedis.evalsha() //执行lua脚本
+```
+
+## 持久化操作
+
+RDB 
+
+配置文件中rdbchecksum的作用#检查数据有效性 默认为yes
+
+```
+save #备份
+bgsave #后台备份
+```
+
