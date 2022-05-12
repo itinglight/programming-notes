@@ -220,7 +220,7 @@ jedis.evalsha() //执行lua脚本
 
 ## 持久化操作
 
-RDB 
+RDB [redis database]
 
 配置文件中rdbchecksum的作用#检查数据有效性 默认为yes
 
@@ -229,3 +229,12 @@ save #备份
 bgsave #后台备份
 ```
 
+AOF [append only file]
+
+
+
+```sheel
+All list
+
+acl who
+```
