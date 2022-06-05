@@ -2,7 +2,7 @@
 
 ##### IDEA安装vue.js 插件
 
-1.安装
+1.安装vue-cli脚手架
 
 ```
 npm install -g @vue/cli
