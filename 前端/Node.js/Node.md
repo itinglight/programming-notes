@@ -43,7 +43,32 @@ Current 测试版【新功能】
 
 - path
 
+  - path.join() //路径拼接
+
+  - path.basename//获取路径中的文件名
+
+    ```javascript
+    const path = require('path')
+    let basename=path.basename('/a/b/c/index.html','.html')
+    console.log(basename)
+    ```
+
+    path.extanme()//获取文件的扩展名
+
 - http
+
+  ```javascript
+  const http =require('http')
+  const server = http.createServer()
+  server.on('request',function(req,res){
+    console.log(req,res)
+  })
+  server.listen(8080,function(){
+    console.log("server is running! http://localhost:8080")
+  })
+  ```
+
+  
 
 - js内置对象
 
