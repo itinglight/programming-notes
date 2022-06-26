@@ -64,8 +64,33 @@ change![截屏2022-06-25 21.30.41](截屏2022-06-25 21.30.41.png)
 
 `wx-if`
 
-`we-elif`
+`wx-elif`
 
-`we-else`
+`wx-else`
 
 <block> 相当于Vue中的<template>
+
+`hiden="{{true}}"` 切换样式
+
+`wx-for`
+
+`wx-for-index`
+
+`wx-for-item`
+
+`wx-key`
+
+
+
+
+
+```js
+  "enablePullDownRefresh": true //开启下拉刷新
+    "backgroundColor": "#bfa",//下拉刷新背景颜色
+"backgroundTextStyle":"dark",//下拉loading颜色
+      "onReachBottomDistance": 50//设置上拉触底的距离
+```
+
+![截屏2022-06-26 00.07.07](截屏2022-06-26 00.07.07.png)
+
+list![截屏2022-06-26 00.21.30](截屏2022-06-26 00.21.30.png)
