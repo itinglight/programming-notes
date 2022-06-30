@@ -185,7 +185,20 @@ Page({
 在组件中使用mobx
 
 ```
-
+// custom-tab-bar/index.js
+import {createStoreBindings} from 'mobx-miniprogram-bindings'
+import {store} from '../store/store'
+Component({
+  lifetimes:{
+    attached(){
+      this.storeBindings = createStoreBindings(this,{
+        store,
+        fields:['sum','active'],
+        actions:['changeActive']
+      })
+    }
+  }
+})
 ```
 
 ## 分包
