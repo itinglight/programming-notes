@@ -158,3 +158,62 @@ store.subscribe(()=>{
 })
 ```
 
+## 完整版本 redux
+
+count_action.js
+
+```javascript
+function createIncrementAction(data){
+  return {type:'increment',data}
+}
+
+export createIncrementAction=data=>({type:'increment',data})
+```
+
+constant.js
+
+```js
+export const INCREMENT = 'increment'
+```
+
+
+
+
+
+action 返回 Object 同步action
+
+返回 Function 异步action
+
+
+
+redux-thunk
+
+store.js
+
+```javascript
+import { createStore , applyMiddleware} from 'redux'
+import thunk from 'redux-thunk'
+export default createStore(countReducer,applyiddleware(thunk))
+```
+
+React-redux Facebook官方出品
+
+![Screen Shot 2022-09-26 at 19.39.57](/Users/itinglight/Desktop/programming-notes/前端/React/Screen Shot 2022-09-26 at 19.39.57.png)
+
+/container 容器文件夹
+
+`yarn add react-redux`
+
+```javascript
+import CountUI from '../../components/Count'
+
+import {connect} from 'react-redux'
+
+export default const CountContainer = connect()(CountUI)
+```
+
+```
+import store from '../../redux/store'
+<count store={store}>
+```
+
