@@ -1,7 +1,14 @@
-> - 9ffWorkspace：工作区
+#Git
+> > - Workspace：工作区
+>
 > - Index / Stage：暂存区
+>
 > - Repository：仓库区（或本地仓库）
+>
 > - Remote：远程仓库
+
+
+![0a10f3c0-f7b0-11eb-991d-334fd31f0201](/Users/itinglight/Desktop/programming-notes/GitHandBook/0a10f3c0-f7b0-11eb-991d-334fd31f0201.png)
 
 ## 一、新建代码库
 
